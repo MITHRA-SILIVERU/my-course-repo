@@ -109,7 +109,7 @@ def submit(request, course_id):
         choice = get_object_or_404(Choice, pk=choice_id)
         submission.choices.add(choice)
 
-    return redirect('onlinecourse:show_exam_result', course_id=course_id, submission_id=submission.id)
+    return redirect('onlinecourse:exam_result', course_id=course_id, submission_id=submission.id)
 
 
 # Extract selected answers
